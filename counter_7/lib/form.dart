@@ -39,15 +39,15 @@ class _MyFormPageState extends State<MyFormPage> {
             appBar: AppBar(
                 title: Text('Form Budget'),
             ),
-            // Menambahkan drawer menu
+            // Tugas 8: Menambahkan drawer menu
             drawer: Drawer(
                 child: Column(
                     children: [
-                    // Menambahkan clickable menu
+                    // Tugas 8: Menambahkan clickable menu
                     ListTile(
                         title: const Text('Counter'),
                         onTap: () {
-                        // Route menu ke halaman utama
+                        // Tugas 8: Route menu ke halaman utama
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => const MyHomePage()),
@@ -57,7 +57,7 @@ class _MyFormPageState extends State<MyFormPage> {
                     ListTile(
                         title: const Text('Tambah Budget'),
                         onTap: () {
-                        // Route menu ke halaman form
+                        // Tugas 8: Route menu ke halaman form
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => const MyFormPage()),
@@ -67,7 +67,7 @@ class _MyFormPageState extends State<MyFormPage> {
                     ListTile(
                         title: const Text('Data Budget'),
                         onTap: () {
-                        // Route menu ke halaman form
+                        // Tugas 8: Route menu ke halaman form
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => const MyShowPage()),
@@ -85,31 +85,31 @@ class _MyFormPageState extends State<MyFormPage> {
                         child: Column(
                             children: [
                                 Padding(
-                                    // Menggunakan padding sebesar 8 pixels
+                                    // Tugas 8: Menggunakan padding sebesar 8 pixels
                                     padding: const EdgeInsets.all(8.0),
                                     child: TextFormField(
                                         decoration: InputDecoration(
-                                            hintText: "Contoh: Nonton konser blacpink",
+                                            hintText: "Contoh: Nonton konser blackpink",
                                             labelText: "Judul",
-                                            //icon: const Icon(Icons.),
-                                            // Menambahkan circular border agar lebih rapi
+                                            
+                                            // Tugas 8: Menambahkan circular border agar lebih rapi
                                             border: OutlineInputBorder(
                                                 borderRadius: BorderRadius.circular(5.0),
                                             ),
                                         ),
-                                        // Menambahkan behavior saat nama diketik 
+                                        // Tugas 8: Menambahkan behavior saat nama diketik 
                                         onChanged: (String? value) {
                                             setState(() {
                                                 _judul = value!;
                                             });
                                         },
-                                        // Menambahkan behavior saat data disimpan
+                                        // Tugas 8: Menambahkan behavior saat data disimpan
                                         onSaved: (String? value) {
                                             setState(() {
                                                 _judul = value!;
                                             });
                                         },
-                                        // Validator sebagai validasi form
+                                        // Tugas 8: Validator sebagai validasi form
                                         validator: (String? value) {
                                             if (value == null || value.isEmpty) {
                                                 return 'Judul tidak boleh kosong!';
@@ -121,31 +121,30 @@ class _MyFormPageState extends State<MyFormPage> {
 
                                 //Nominal
                                 Padding(
-                                    // Menggunakan padding sebesar 8 pixels
+                                    // Tugas 8: Menggunakan padding sebesar 8 pixels
                                     padding: const EdgeInsets.all(8.0),
                                     child: TextFormField(
                                         decoration: InputDecoration(
                                             hintText: "Contoh: 93000",
                                             labelText: "Nominal",
-                                            //icon: const Icon(Icons.),
-                                            // Menambahkan circular border agar lebih rapi
+                                            // Tugas 8: Menambahkan circular border agar lebih rapi
                                             border: OutlineInputBorder(
                                                 borderRadius: BorderRadius.circular(5.0),
                                             ),
                                         ),
-                                        // Menambahkan behavior saat nama diketik 
+                                        // Tugas 8: Menambahkan behavior saat nama diketik 
                                         onChanged: (String? value) {
                                             setState(() {
                                                 _nominal = value!;
                                             });
                                         },
-                                        // Menambahkan behavior saat data disimpan
+                                        // Tugas 8: Menambahkan behavior saat data disimpan
                                         onSaved: (String? value) {
                                             setState(() {
                                                 _nominal = value!;
                                             });
                                         },
-                                        // Validator sebagai validasi form
+                                        // Tugas 8: Validator sebagai validasi form
                                         validator: (String? value) {
                                             if (value == null || value.isEmpty) {
                                                 return 'Nominal tidak boleh kosong!';
@@ -155,7 +154,7 @@ class _MyFormPageState extends State<MyFormPage> {
                                     ),
                                 ),
 
-                                //Pilih Jenis
+                                // Tugas 8: Pilih Jenis
                                 ListTile(
                                     leading: const Icon(Icons.class_),
                                     title: const Text(

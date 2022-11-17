@@ -1,3 +1,45 @@
+# Tugas 8 PBP: Flutter Form
+
+**Nama : Andi Ayuna Rymang** <br />
+**NPM : 2106637265** <br />
+**Kelas : A** <br />
+
+## Jelaskan perbedaan ```navigator.push``` dan ```Navigator.pushReplacement```.
+```push``` hanya akan menambah isi stack dari route, sedangkan ```pushReplacement``` akan mengganti widget teratas pada stack dengan widget baru. ```push``` tidak akan menghapus widget sebelumnya, sementara ```pushReplacement``` akan menggantikan widget sebelumnya dengan widget baru.
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya. 
+- ```Form``` --> memberikan screen untuk input form user
+- ```Drawer``` --> digunakan untuk navigasi
+- ```ListTile``` --> agar bisa mengarahkan user ke screen yang dia ingingkan ketika meng-click tulisan screen yang ada di navigasi
+- ```Padding``` --> berfungsi untuk membuat ruang kosong
+- ```Column``` --> menampilkan widget-widget secara vertikal. Terdapat properti children sehingga widget ini dapat diisi oleh banyak widget
+- ```Dropdownbutton``` --> digunakan untuk menu dropdown user input
+- ```TextFormField``` --> form field untuk menampung text fiels
+- ```TextButton``` --> menapung kode yang digunakan untuk submit isi form dan menyimpan isi for tersebut ke suatu list
+- ```Align``` --> mengatur posisi
+- ```SizedBox``` --> mengatur ukuran card
+- ```Card``` --> untuk menampilkan data dari form
+
+## Sebutkan jenis-jenis event yang ada pada Flutter (contoh: ```onPressed```).
+- ```onPressed```
+- ```onLongPress```
+- ```onFocusChange```
+- ```onTap```
+- ```onHover```
+
+## Jelaskan bagaimana cara kerja ```Navigator``` dalam "mengganti" halaman dari aplikasi FLutter.
+Cara kerja ```Navigator``` adalah dengan menampilkan screen dari elemen teratas pada stack of route. Widget ```Navigator``` memiliki method ```push()``` dan ```pop()```. Penggunaan push akan menambahkan screen ke bagian paling atas stack sedangkan penggunaan pop akan menghapus screen teratas dari stack. 
+
+## Jelaskan bagaimana cara kamu mengimplementasikan _checklist_ di atas.
+- membuat dua file baru yaitu form.dart dan show.dart
+- membuat drawer untuk navigator sehingga user dapat berpindah ke screen lainnya melalui navigator
+- mebuat widget form di dalam form.dart yang berisi key untuk identifikasi form dan validasi form. Form akan meminta input berupa judul, nominal, dan jenis budget.
+- mengatur padding setiap input
+- menambahkan behavior ketika nama diketik, saat data disimpan, dan validator
+- pada show.dart, setiap data akan ditampilkan dengan melakukan looping pada children dari Column. Tiap data akan ditampilkan dalam bentuk card.
+
+<br />
+<br />
 # Tugas 7 PBP: Elemen Dasar Flutter
 
 **Nama : Andi Ayuna Rymang** <br />
