@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:counter_7/form.dart';
+import 'package:counter_7/show.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,19 +13,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Program Counter',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Program Counter'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({super.key});
 
-  final String title;
+  final String title = 'Tugas PBP';
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -62,6 +64,45 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+      ),
+
+      // Tugas 8: menambahkan drawer menu
+      drawer: Drawer(
+        child: Column(
+          children: [
+            // Tugas 8: Menambahkan clickable menu
+            ListTile(
+              title: const Text('Counter'),
+              onTap: () {
+                // Tugas 8: Route menu ke halaman utama
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyHomePage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Tambah Budget'),
+              onTap: () {
+                // Tugas 8: Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyFormPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: const Text('Data Budget'),
+              onTap: () {
+                // Tugas 8: Route menu ke halaman form
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MyShowPage()),
+                );
+              },
+            ),
+          ],
+        ),
       ),
       body: Center(
         child: Column(
