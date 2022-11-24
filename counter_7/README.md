@@ -1,3 +1,34 @@
+# Tugas 9 : Integrasi Web Service pada Flutter
+**Nama : Andi Ayuna Rymang** <br />
+**NPM : 2106637265** <br />
+**Kelas : A** <br />
+
+## Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?
+Bisa. JSON merupakan suatu object dalam notasi JS yang dimana pada bahasa Dart, hal ini mirip dengan Map yang terdiri dari key dam value pair. Akan tetapi pengambilan data JSON tanpa melakukan konversi ke dalam suatu model tidak direkomendasikan dalam pengimplementasiaannya. Konversi data JSON ke dalam suatu mode bertuuan untuk meminimalisir pengambilan atau pengiriman data melalui http request yang akan ditampilkan pada sisi UI aplikasi
+
+
+## Sebutkan widget apa saja yang kamu pakai di proyek kali ini dan jelaskan fungsinya.
+- ```Container```, ```Center```, ```Column```, ```Row``` -> digunakan untuk mengantur posisi widget-widget lainnya
+- ```FutureBuilder``` -> berfungsi agar widget tersebut dapat membangun dirinya sendiri berdasarkan snapshot terakhir interaksinya dengan sebuah Future
+- ```Text``` -> digunakan untuk menapilkan text dan memberikan styling pada text
+- ```Form``` --> memberikan screen untuk input form user
+- ```Drawer``` --> digunakan untuk navigasi
+- ```ListTile``` --> agar bisa mengarahkan user ke screen yang dia ingingkan ketika meng-click tulisan screen yang ada di navigasi
+
+## Jelaskan mekanisme pengambilan data dari json hingga dapat ditampilkan pada Flutter.
+Untuk melakukan fetch data JSON dari internet, kita perlu menggunakan method get dari package http. Agar kita dapat melakuakn request HTTP GET dari suatu website, kita perlu menyediakan URI untuk source data JSON-nya lalu di-parse menjadi URL. URL tersebut menspesifikasikan protokol HTTP. 
+Ketika address dari HTP dimaksukkan ke web browser, maka browser tsb akan mengirimkan request HTTP GET ke web server. Lalu, web server akan mengirimkan response HTTP. Response tersebut kemudia di-decode yang pada tugas ini akan dimasukkan ke dalam list untuk nantinya ditampilkan di aplikasi
+
+##  Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas.
+- Refactor file-file ke dala forlder yang terpisah
+- Membuat 3 file baru : ```mywatchlistmodel.dart```, ```mywatchlist.dart```, dan ```detail.dart```
+- ```mywatchlistmodel.dart``` dibuat boilerplate untuk memproses data JSON yang diambil
+- Mengambil data jSON dari link heroku tugas3 sebelumnya
+- Data-data dari JSON kemudian ditampilkan pada card
+- ```detail.dart``` berisi informasi lengkap dari tiap watchlist yang baru bisa diakses ketika card pada page mywatchlist di-click (menggunakan fungsi push)
+- Terakhir, menambahkan button back pada detail.dart dengan memanfaatkan fungsi pop
+
+
 # Tugas 8 PBP: Flutter Form
 
 **Nama : Andi Ayuna Rymang** <br />
@@ -40,6 +71,7 @@ Cara kerja ```Navigator``` adalah dengan menampilkan screen dari elemen teratas 
 
 <br />
 <br />
+
 # Tugas 7 PBP: Elemen Dasar Flutter
 
 **Nama : Andi Ayuna Rymang** <br />
